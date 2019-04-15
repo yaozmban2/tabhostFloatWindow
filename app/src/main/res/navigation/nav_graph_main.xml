@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph_main"
+        app:startDestination="@id/fragmentPageOne">
+
+    <activity android:name="com.excellent.navigationdemo.MainActivity"
+              android:id="@+id/mainActivity">
+
+        <action android:id="@+id/show_user_info"
+                app:destination="@id/fragmentPageFour"/>
+    </activity>
+
+
+    <fragment
+            android:id="@+id/fragmentPageOne"
+            android:name="com.excellent.navigationdemo.fragment.FragmentOne"
+            android:label="fragmentPageOne"
+            tools:layout="@layout/fragment_one">
+
+        <action android:id="@+id/goto_fragment_two"
+                app:destination="@id/fragmentPageTwo"/>
+
+    </fragment>
+
+
+    <fragment
+            android:id="@+id/fragmentPageTwo"
+            android:name="com.excellent.navigationdemo.fragment.FragmentTwo"
+            android:label="fragmentPageTwo"
+            tools:layout="@layout/fragment_two">
+
+        <action android:id="@+id/back_to_fragment_one"
+                app:popUpTo="@id/fragmentPageOne"/>
+        <action android:id="@+id/goto_fragment_three"
+                app:destination="@id/fragmentPageThree"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/fragmentPageThree"
+            android:name="com.excellent.navigationdemo.fragment.FragmentThree"
+            android:label="fragmentPageThree"
+            tools:layout="@layout/fragment_three">
+
+        <action android:id="@+id/goto_fragment_four"
+                app:destination="@id/fragmentPageFour"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/fragmentPageFour"
+            android:name="com.excellent.navigationdemo.fragment.FragmentFour"
+            android:label="fragmentPageFour"
+            tools:layout="@layout/fragment_four">
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/fragmentPageFive"
+            android:name="com.excellent.navigationdemo.fragment.FragmentFive"
+            android:label="fragmentPageFive"
+            tools:layout="@layout/fragment_five">
+
+    </fragment>
+
+
+</navigation>
