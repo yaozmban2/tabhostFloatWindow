@@ -7,7 +7,7 @@ import androidx.navigation.Navigation.findNavController
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
- *
+ * lff
  */
 class MainActivity : AppCompatActivity() {
 
