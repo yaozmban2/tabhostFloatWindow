@@ -1,10 +1,11 @@
 package com.excellent.navigationdemo.fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.excellent.navigationdemo.R
 import kotlinx.android.synthetic.main.fragment_three.*
@@ -15,6 +16,10 @@ import kotlinx.android.synthetic.main.fragment_three.*
  *
  */
 class FragmentThree : Fragment() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.d("FragmentThree", "onCreate")
+    }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_three, container, false)
     }

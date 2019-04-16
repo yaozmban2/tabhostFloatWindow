@@ -10,6 +10,7 @@
 
 
             android:name=".base.MyApplication"
+            tools:ignore="GoogleAppIndexingWarning"
             android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>

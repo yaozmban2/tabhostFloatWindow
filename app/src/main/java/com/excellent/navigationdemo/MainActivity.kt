@@ -1,9 +1,13 @@
 package com.excellent.navigationdemo
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.plusAssign
+import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -15,26 +19,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var navController = findNavController(this, R.id.my_nav_host_fragment)
+        val navController = findNavController(this, R.id.my_nav_host_fragment)
 
-        var navBuilderOption = NavOptions.Builder().setClearTask(true).build()
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.my_nav_host_fragment)!!
 
-        btn_home.setOnClickListener {
-            navController.navigate(R.id.fragmentPageOne, null, navBuilderOption)
-        }
+        val navigator = CustomNavigator(this,navHostFragment.childFragmentManager,R.id.my_nav_host_fragment)
+        navController.navigatorProvider += navigator
 
-        btn_user_info.setOnClickListener {
-            navController.navigate(R.id.fragmentPageFour, null, navBuilderOption)
-        }
+        navController.setGraph(R.navigation.nav_graph_main)
 
-        btn_setting.setOnClickListener {
-            navController.navigate(R.id.fragmentPageFive, null, navBuilderOption)
+        navigation_lin_layout.setOnCheckedChangeListener { group, checkedId ->
+            when(checkedId){
+                R.id.rbtn_home -> {
+                    navController.navigate(R.id.fragmentPageOne, null)
+                }
+
+                R.id.rbtn_user_info ->{
+                    navController.navigate(R.id.fragmentPageFour, null)
+                }
+
+                R.id.rbtn_setting -> {
+                    navController.navigate(R.id.fragmentPageFive, null)
+                }
+            }
         }
 
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return findNavController(this, R.id.my_nav_host_fragment).navigateUp()
-    }
 
 }
