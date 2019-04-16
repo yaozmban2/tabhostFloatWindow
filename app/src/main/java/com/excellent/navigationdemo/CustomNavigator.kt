@@ -9,7 +9,7 @@ import androidx.navigation.fragment.FragmentNavigator
 import androidx.fragment.app.FragmentManager
 
 /**
- * Description：
+ * Description：自定的Navigator
  * Created by lff on 2019/4/15
  */
 @Navigator.Name("custom_fragment")
