@@ -15,9 +15,9 @@
 
     <custom_fragment
             android:id="@+id/fragmentPageFour"
-            android:name="com.excellent.navigationdemo.fragment.FragmentFour"
-            android:label="fragmentPageFour"
-            tools:layout="@layout/fragment_four">
+            android:name="com.excellent.navigationdemo.fragment.FragmentFourContainer"
+
+            tools:layout="@layout/fragment_mine">
 
     </custom_fragment>
 

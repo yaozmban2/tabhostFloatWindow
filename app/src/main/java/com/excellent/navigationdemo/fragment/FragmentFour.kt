@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.excellent.navigationdemo.R
 import kotlinx.android.synthetic.main.fragment_four.*
 
@@ -26,7 +27,8 @@ class FragmentFour : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         four_4.setOnClickListener {
-            Toast.makeText(context,"444",Toast.LENGTH_LONG).show()
+            //Toast.makeText(context,"444",Toast.LENGTH_LONG).show()
+            findNavController().navigate(R.id.goto_fragment_minedetail)
         }
     }
 }

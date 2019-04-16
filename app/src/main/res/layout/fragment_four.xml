@@ -9,7 +9,7 @@
             android:id="@+id/four_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="四"
+            android:text="四——跳转到我的详情"
             android:textStyle="bold"
             android:textSize="20sp"
             app:layout_constraintTop_toTopOf="parent"

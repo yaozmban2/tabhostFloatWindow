@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_mine"
+    app:startDestination="@id/mine">
+    <fragment
+        android:id="@+id/mine"
+        android:name="com.excellent.navigationdemo.fragment.FragmentFour">
+        <action
+            android:id="@+id/goto_fragment_minedetail"
+            app:destination="@id/FragmentMineDetail"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FragmentMineDetail"
+        android:name="com.excellent.navigationdemo.fragment.FragmentMineDetail">
+
+    </fragment>
+
+</navigation>
