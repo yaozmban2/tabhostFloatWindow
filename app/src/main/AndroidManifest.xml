@@ -2,13 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
           package="com.excellent.navigationdemo">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
-
             android:icon="@mipmap/ic_launcher"
-
             android:roundIcon="@mipmap/ic_launcher_round"
-
-
             android:name=".base.MyApplication"
             tools:ignore="GoogleAppIndexingWarning"
             android:theme="@style/AppTheme">
@@ -19,6 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".FragmentTestActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".TabhostActivity"/>
     </application>
 
 </manifest>

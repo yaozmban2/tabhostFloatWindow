@@ -9,82 +9,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-    <fragment
-        android:id="@+id/my_nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:defaultNavHost="true"
-         />
-
-        <RadioGroup
-            android:id="@+id/navigation_lin_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            >
-
-            <RadioButton
-                android:id="@+id/rbtn_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableTop="@drawable/home"
-                android:gravity="center_horizontal"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingRight="10dp"
-                android:text="首页"
-                android:textColor="@drawable/tab_text_color"
-                android:checked="true"
-                android:layout_weight="1"/>
-
-            <RadioButton
-                android:id="@+id/rbtn_user_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableTop="@drawable/user_info"
-                android:gravity="center_horizontal"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingRight="10dp"
-                android:text="我的"
-                android:textColor="@drawable/tab_text_color"
-                android:checked="false"
-                android:layout_weight="1"/>
-
-            <RadioButton
-                android:id="@+id/rbtn_setting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:button="@null"
-                android:drawableTop="@drawable/settings"
-                android:gravity="center_horizontal"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="设置"
-                android:textColor="@drawable/tab_text_color"
-                android:checked="false"
-                android:layout_weight="1"/>
-
-        </RadioGroup>
-
-    <!--<com.google.android.material.bottomnavigation.BottomNavigationView-->
-        <!--android:id="@+id/bottom_nav"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="0dp"-->
-        <!--android:layout_marginEnd="0dp"-->
-        <!--android:background="?android:attr/windowBackground"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--app:menu="@menu/navigation" />-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="184dp"
+        android:layout_height="73dp"
+        android:text="打开悬浮窗" />
 </LinearLayout>
 
     <!--<?xml version="1.0" encoding="utf-8"?>-->

@@ -1,0 +1,96 @@
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransparent_15"
+    android:layout_weight="1">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- TabWidget组件id值不可变-->
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TabWidget>
+
+
+        <!-- FrameLayout布局，id值不可变-->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@android:id/tabs">
+
+
+            <!-- 第一个tab的布局 -->
+            <RelativeLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <ScrollView android:layout_height="50dp"
+                    android:layout_width="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="第一个tab的布局" />
+
+                        <CheckBox
+                            android:id="@+id/tech_build_check"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="30dp"
+                            android:text="测试CheckBox"/>
+
+                        <CheckBox
+                            android:id="@+id/tech_build_check2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="60dp"
+                            android:text="测试CheckBox2"/>
+
+                        <CheckBox
+                            android:id="@+id/tech_build_check3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="90dp"
+                            android:text="测试CheckBox3"/>
+                    </RelativeLayout>
+                </ScrollView>
+
+                <Button
+                    android:id="@+id/test_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="50dp"
+                    android:text="测试按钮"/>
+
+            </RelativeLayout>
+
+            <!-- 第二个tab的布局 -->
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="第二个tab的布局" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>
